@@ -63,16 +63,16 @@ foreach my $line (@log) {
     }
     next if $duplicate;
 
-    my $bug = fetch_bug($bug_id);
-    if ($bug->{status} eq 'RESOLVED' && $bug->{resolution} ne 'FIXED') {
-      next;
-    }
-    if ($bug->{summary} =~ /\bbackport\s+(?:upstream\s+)?bug\s+(\d+)/i) {
-      my $upstream = $1;
-      $bug->{summary} = fetch_bug($upstream)->{summary};
-    }
+    # my $bug = fetch_bug($bug_id);
+    # if ($bug->{status} eq 'RESOLVED' && $bug->{resolution} ne 'FIXED') {
+    #   next;
+    # }
+    # if ($bug->{summary} =~ /\bbackport\s+(?:upstream\s+)?bug\s+(\d+)/i) {
+    #   my $upstream = $1;
+    #   $bug->{summary} = fetch_bug($upstream)->{summary};
+    # }
     push @revisions,
-      {hash => $revision, bug_id => $bug_id, summary => $bug->{summary},};
+      {hash => $revision, bug_id => $bug_id, summary => 'No summary',};
   }
 }
 if (!@revisions) {
