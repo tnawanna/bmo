@@ -26,7 +26,7 @@ use URI::QueryParam;
 use URI;
 
 my $github_repo  = "https://github.com/mozilla-bteam/bmo";
-my $version_info = decode_json(get('https://bugzilla.mozilla.org/__version__'));
+my $version_info = '20190809.1'; # decode_json(get('https://bugzilla.mozilla.org/__version__'));
 my $tag          = 'release-' . Bugzilla->VERSION;
 my $prod_tag     = "release-$version_info->{version}";
 my $tag_url      = "$github_repo/tree/$tag";
