@@ -40,7 +40,7 @@ BEGIN {
 # PREREQ_PM
 my %requires = (
   'Algorithm::BloomFilter'              => '0.02',
-  'Archive::Tar'			=> '2.32',
+  'Archive::Tar'			                  => '2.32',
   'CGI'                                 => '4.31',
   'CGI::Compile'                        => 0,
   'CGI::Emulate::PSGI'                  => 0,
@@ -58,9 +58,9 @@ my %requires = (
   'Devel::NYTProf'                      => '6.04',
   'Digest::SHA'                         => '5.47',
   'EV'                                  => '4.0',
-  'Email::Address'			=> '1.912',
-  'Email::MIME'                         => '1.904',
-  'Email::Send'                         => '1.911',
+  'Email::Address'			                => '1.912',
+  'Email::MIME'                         => '1.946',
+  'Email::Send'                         => '2.201',
   'FFI::Platypus'                       => 0,
   'Future'                              => '0.34',
   'HTML::Escape'                        => '1.10',
